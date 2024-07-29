@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %} Create To Do {% endblock %}
+{% block content %} 
+    <h3>Create Page</h3>
+    <form action="" method="POST" class="form-group" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <input type="submit" name="save" value="Create New" class="btn btn-success">
+            </div>
+            {{form.name}}
+        
+        </div>
+    </form>
+{% endblock %}
